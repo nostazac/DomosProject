@@ -1,0 +1,17 @@
+message = input("Decryption ciphertext: ")
+SYMBOLS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 !?.8'
+
+
+for key in range(len(SYMBOLS)):
+	translated = ''
+
+	for symbol in message:
+		if symbol in SYMBOLS:
+			symbolIndex = SYMBOLS.find(symbol)
+			translatedIndex = symbolIndex - key
+			if translatedIndex < 0:
+				translatedIndex = translatedIndex + len(SYMBOLS)
+				translated = translated +  SYMBOLS[translatedIndex]
+			else:
+				translated = translated + symbol
+	print('Key #%s: %s' % (key, translated))

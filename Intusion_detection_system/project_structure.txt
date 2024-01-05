@@ -1,0 +1,10 @@
+intrusion-detection-system
+
+|-- app/
+|   |-- __init__py
+|   |-- __routes.py
+|   |-- __templates.py
+|       |-- index.html
+|-- venv/ (virtual environment)
+|-- config.py
+|-- run.py
